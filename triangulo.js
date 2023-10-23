@@ -1,6 +1,6 @@
 const form = document.querySelector("form")
-const resp = document.querySelector("outResp")
-const resp1 = document.querySelector("outResp1")
+const resp = document.querySelector("#outResp")
+const resp1 = document.querySelector("#outResp1")
 
 //ouvinte
 form.addEventListener("submit", (e)=>{
@@ -18,11 +18,11 @@ form.addEventListener("submit", (e)=>{
         return
     }
 
-    resp.innerText = `Lados podem formar um triângulo`
+    resp.innerText = "Lados podem formar um triângulo"
 
     if(ladoA == ladoB && ladoA == ladoC){
         resp1.innerText = `Tipo: Equilátero`
-    } else if ((ladoA == ladoB) || (ladoA == ladoC) || (ladoC == ladoC)){
+    } else if ((ladoA == ladoB) || (ladoA == ladoC) || (ladoB == ladoC)){
         resp1.innerText = `Tipo: Isóceles`
     } else {
         resp1.innerText = `Tipo: Escaleno`
